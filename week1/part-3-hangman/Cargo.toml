@@ -4,4 +4,5 @@ version = "0.1.0"
 authors = ["Armin Namavari <arminn@stanford.edu>"]
 
 [dependencies]
+console = "0.15.4"
 rand = "0.6.0"
