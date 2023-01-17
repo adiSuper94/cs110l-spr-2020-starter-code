@@ -52,11 +52,11 @@ fn main() {
         word_map.get_mut(&key).unwrap().push(i);
     }
     let mut guessed_chars: HashSet<char> = HashSet::new();
-    let mut guesses_left = 5;
+    let mut guesses_left = NUM_INCORRECT_GUESSES;
     loop {
-        if guesses_left <= 0 {
-            break;
+        if guesses_left == 0 {
             println!("Sorry, you ran out of guesses!");
+            break;
         }
         println!("The word so far is: {:?}", word_so_far);
         println!(
